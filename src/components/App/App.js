@@ -88,8 +88,6 @@ const App = () => {
   return (
     < div className="App" >
       <h1 className="welcome-message">Lane In Your League</h1>
-      <div className="individual-champion">
-      </div>
       < div className="champion-load">
         <h2>
           <ChampionsLoad characters={appState} displayInfo={displayInfo} />

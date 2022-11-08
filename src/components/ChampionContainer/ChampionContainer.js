@@ -1,6 +1,6 @@
 import React from "react";
 import ChampionCard from "../ChampionCard/ChampionCard";
-// import './champion-container.css'
+import './ChampionContainer.css'
 const ChampionsLoad = ({ characters, displayInfo }) => {
     const featureChampions = characters.map((character, index,) => {
         return (

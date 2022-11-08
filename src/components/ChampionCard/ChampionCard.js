@@ -1,5 +1,5 @@
 import React from "react";
-// import "./single-champion.css";
+import './ChampionCard.css'
 
 const ChampionCard = ({ champion, index, displayInfo }) => {
     const imgPrefix = 'http://ddragon.leagueoflegends.com/cdn/12.18.1/img/champion/';
