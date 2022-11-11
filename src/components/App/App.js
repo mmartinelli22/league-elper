@@ -3,62 +3,14 @@ import './App.css'
 import { fetchData } from "../../apiCalls";
 import ChampionsLoad from "../ChampionContainer/ChampionContainer";
 import TagForm from "../../TagForm/TagForm";
-// import TagForm from "../TagForm/TagForm";
-import ChampionCard from "../ChampionCard/ChampionCard";
 import { ChampionInfo } from "../IndividualChampion/IndividualChampion";
-// export interface Champion {
-//     version: string,
-//     id: string,
-//     key: string,
-//     name: string,
-//     title: string,
-//     blurb: string,
-//     info: {
-//         attack: number,
-//         defense: number,
-//         magic: number,
-//         difficulty: number
-//     },
-//     image: {
-//         full: string,
-//         sprite: string,
-//         group: string,
-//         x: number,
-//         y: number,
-//         w: number,
-//         h: number,
-//     },
-//     tags: string[]
-//     partype: string,
-//     stats: {
-//         hp: string,
-//         hpperlevel: number,
-//         mp: number,
-//         mpperlevel: number,
-//         movespeed: number,
-//         armor: number,
-//         armorperlevel: number,
-//         spellblock: number,
-//         spellblockperlevel: number,
-//         attackrange: number,
-//         hpregen: number,
-//         hpregenperlevel: number,
-//         mpregen: number,
-//         mpregenperlevel: number,
-//         crit: number,
-//         critperlevel: number,
-//         attackdamage: number,
-//         attackdamageperlevel: number,
-//         attackspeedperlevel: number,
-//         attackspeed: number
-//     }
-// }
+import { Route, Switch } from "react-router-dom";
+
 
 const App = () => {
   const [appState, setAppState] = useState([])
   const [resultState, setResultState] = useState([])
-  const [singleInfo, setSingleInfo] = useState([])
-  const [imageClicked, clickImage] = useState(false)
+  const [form, showForm] = useState(true)
 
   useEffect(() => {
     fetchData().then((json) => {
@@ -71,16 +23,6 @@ const App = () => {
   const resetResultState = () => {
     setResultState([])
   }
-  const displayInfo = (e) => {
-    console.log(e)
-    clickImage(true)
-    const singleChampion = appState.filter((champion) => {
-      return champion.id.includes(e.target.id)
-    })
-    setSingleInfo(singleChampion)
-    console.log(singleChampion)
-  }
-
   const findChampions = (e) => {
     e.preventDefault();
     console.log(e)
@@ -89,34 +31,40 @@ const App = () => {
     })
     setResultState(getChampion)
   }
-
+  // const displayForm = () => {
+  //   showForm(false)
+  // }
+  // const showFilterList = () => {
+  //   showForm(true)
+  // }
 
   return (
     < div className="App" >
-      <div className="filter-button">
-        <TagForm findChampions={findChampions} resetResultState={resetResultState} />
-      </div>
-      <h1 className="welcome-message">Lane In Your League</h1>
-      {singleInfo.length ? <div className="sinlge-champion"><ChampionInfo champion={singleInfo[0]} /></div> :
-        <div className="champion-container">
-          {!resultState.length ?
-            <ChampionsLoad characters={appState} displayInfo={displayInfo} />
+      <Route
+        exact
+        path="/:id"
+        render={({ match }) => {
+          return (
+            <ChampionInfo
+              id={match.params.id}
+              champion={appState}
+              resetResultState={resetResultState}
+            />
+          );
+        }}
+      />
 
-
-            :
-            <ChampionsLoad characters={resultState} displayInfo={displayInfo} />
-
-          }
-
-
-
+      <Switch>
+        <div className="home-page">
+          <Route exact path="/" render={() =>
+            <div className="filter-button">
+              <TagForm findChampions={findChampions} resetResultState={resetResultState} />
+            </div>
+          } />
+          <Route exact path="/" render={() => !resultState.length ? <div className="champion-container"><ChampionsLoad characters={appState} /></div> : <div className="champion-container"><ChampionsLoad characters={resultState} /></div>} />
         </div>
-      }
-    </div>
-    // < div className="champion-load">
-    //   <h2>
-    //   </h2>
-    // </div>
+      </Switch >
+    </div >
   )
 }
 export default App;

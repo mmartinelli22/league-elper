@@ -11,9 +11,10 @@ const TagForm = ({ findChampions, resetResultState }) => {
 
     return (
         <>
-            <h1 className="tag-button">
+            <h1 className="welcome-message">League Helper   </h1>
+            <h2>
                 {tagButtons}
-            </h1>
+            </h2>
             <button onClick={() => resetResultState()}>Reset the filter?</button>
         </>
     )

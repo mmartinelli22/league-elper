@@ -3,33 +3,22 @@ body {
 }
 
 .App {
-  text-align: center;
   height: 100vh;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  overflow: scroll;
 }
 
 .champion-container {
-  margin-top: 100%;
-  margin-right: 60%;
-
+  align-items: center;
 }
 
-.welcome-message {
-  margin-bottom: 40%;
-}
-
-h2 {
+.home-page {
+  align-items: center;
+  justify-content: center;
   display: flex;
+  flex-direction: column;
   flex-wrap: wrap;
-  left: 500px;
+  overflow: scroll;
 }
 
 .filter-button {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-  margin-bottom: 40%;
+  top: 500px;
 }

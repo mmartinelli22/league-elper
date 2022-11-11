@@ -1,19 +1,28 @@
 import React from "react";
-export const ChampionInfo = ({ champion }) => {
+import './IndividualChampion.css'
+import { Link } from "react-router-dom/cjs/react-router-dom.min";
+export const ChampionInfo = ({ champion, id, resetResultState, showFilterList }) => {
+    console.log('id', id)
     const imgPrefix = 'http://ddragon.leagueoflegends.com/cdn/12.18.1/img/champion/';
+    const findChamp = champion.find((character) => {
+        return character.name === id
+    });
     return (
-        <div className="single-champion">
-            <h1 className="champion-name">{champion.name}</h1>
-            <h3>{champion.title}</h3>
-            <h3>{champion.blurb}</h3>
-            <h4>{champion.tag}</h4>
-            {/* <img className="champion-img"
-                key={`${champion.id}`}
-                id={champion.id}
-                title={champion.title}
-                src={`${imgPrefix}${champion.image.full}`}
-            /> */}
-            <button>Return to Champions List</button>
+        <div className="single-champion-details">
+            <img className="champion-details-img"
+                key={`${findChamp.id}`}
+                id={findChamp.id}
+                title={findChamp.title}
+                src={`${imgPrefix}${findChamp.image.full}`}
+            />
+            <h2 className="champion-details-name">{findChamp.name}</h2>
+            <h3 className="champion-details-title">{findChamp.title}</h3>
+            <article>{findChamp.blurb}</article>
+            <p>{findChamp.tag}</p>
+            <h5 className="'champion-details-tags">Champions Tags: {findChamp.tags.join(' ,')}</h5>
+            <Link to='/'>
+                <button onClick={() => [resetResultState(), showFilterList()]}>Return to Champions List</button>
+            </Link>
         </div>
 
     )
