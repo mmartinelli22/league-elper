@@ -9,8 +9,6 @@ const ChampionsLoad = ({ characters, displayInfo }) => {
                 index={index}
                 key={`${character.id}-${index}`}
                 displayInfo={displayInfo}
-
-
             />
 
         )

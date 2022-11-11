@@ -11,8 +11,9 @@ body {
   overflow: scroll;
 }
 
-.champion-load {
-  margin-top: 10%;
+.champion-container {
+  margin-top: 100%;
+  margin-right: 60%;
 
 }
 
@@ -26,6 +27,9 @@ h2 {
   left: 500px;
 }
 
-.drop-down {
+.filter-button {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
   margin-bottom: 40%;
 }

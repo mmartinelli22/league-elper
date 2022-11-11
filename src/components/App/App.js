@@ -2,8 +2,10 @@ import React, { useState, useEffect } from "react";
 import './App.css'
 import { fetchData } from "../../apiCalls";
 import ChampionsLoad from "../ChampionContainer/ChampionContainer";
+import TagForm from "../../TagForm/TagForm";
 // import TagForm from "../TagForm/TagForm";
 import ChampionCard from "../ChampionCard/ChampionCard";
+import { ChampionInfo } from "../IndividualChampion/IndividualChampion";
 // export interface Champion {
 //     version: string,
 //     id: string,
@@ -51,21 +53,12 @@ import ChampionCard from "../ChampionCard/ChampionCard";
 //         attackspeed: number
 //     }
 // }
-// interface AppProps {
-//     champions: Champion[]
-// }
-// interface singleChampionProp {
-//     champions: Champion[]
-// }
-// interface ResultProps {
-//     tagline: string[];
-//     champions: Champion[];
-// }
 
 const App = () => {
   const [appState, setAppState] = useState([])
   const [resultState, setResultState] = useState([])
   const [singleInfo, setSingleInfo] = useState([])
+  const [imageClicked, clickImage] = useState(false)
 
   useEffect(() => {
     fetchData().then((json) => {
@@ -75,25 +68,55 @@ const App = () => {
     }
     );
   }, []);
-
-  const displayInfo = (event) => {
-    event.preventDefault();
-    const getChampion = appState.champions.filter((champion) => {
-      return champion.title === event.target.id
+  const resetResultState = () => {
+    setResultState([])
+  }
+  const displayInfo = (e) => {
+    console.log(e)
+    clickImage(true)
+    const singleChampion = appState.filter((champion) => {
+      return champion.id.includes(e.target.id)
     })
-    setSingleInfo({ champions: getChampion })
-    console.log(singleInfo)
-  };
+    setSingleInfo(singleChampion)
+    console.log(singleChampion)
+  }
+
+  const findChampions = (e) => {
+    e.preventDefault();
+    console.log(e)
+    const getChampion = appState.filter((champion) => {
+      return champion.tags.includes(e.target.name)
+    })
+    setResultState(getChampion)
+  }
+
 
   return (
     < div className="App" >
-      <h1 className="welcome-message">Lane In Your League</h1>
-      < div className="champion-load">
-        <h2>
-          <ChampionsLoad characters={appState} displayInfo={displayInfo} />
-        </h2>
+      <div className="filter-button">
+        <TagForm findChampions={findChampions} resetResultState={resetResultState} />
       </div>
-    </div >
+      <h1 className="welcome-message">Lane In Your League</h1>
+      {singleInfo.length ? <div className="sinlge-champion"><ChampionInfo champion={singleInfo[0]} /></div> :
+        <div className="champion-container">
+          {!resultState.length ?
+            <ChampionsLoad characters={appState} displayInfo={displayInfo} />
+
+
+            :
+            <ChampionsLoad characters={resultState} displayInfo={displayInfo} />
+
+          }
+
+
+
+        </div>
+      }
+    </div>
+    // < div className="champion-load">
+    //   <h2>
+    //   </h2>
+    // </div>
   )
 }
 export default App;
