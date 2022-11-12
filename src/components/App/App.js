@@ -2,9 +2,10 @@ import React, { useState, useEffect } from "react";
 import './App.css'
 import { fetchData } from "../../apiCalls";
 import ChampionsLoad from "../ChampionContainer/ChampionContainer";
-import TagForm from "../../TagForm/TagForm";
+import TagForm from "../TagForm/TagForm";
 import { ChampionInfo } from "../IndividualChampion/IndividualChampion";
-import { Route, Switch } from "react-router-dom";
+import { Route, Switch, BrowserRouter } from "react-router-dom";
+
 
 
 const App = () => {

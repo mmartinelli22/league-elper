@@ -12,7 +12,7 @@ const TagForm = ({ findChampions, resetResultState }) => {
 
     return (
         <>
-            <h1 className="welcome-message">League Helper   </h1>
+            <h1 className="welcome-message">League Helper: Help You Search For Your Champion!  </h1>
             <h2>
                 {tagButtons}
             </h2>
