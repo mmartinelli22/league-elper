@@ -1,4 +1,5 @@
 import React from "react";
+import './TagForm.css'
 const TagForm = ({ findChampions, resetResultState }) => {
     const possibleTags = ["Fighter", "Tank", "Mage", "Assassin", "Marksman", "Support"];
     const tagButtons = possibleTags.map(tag => {
@@ -15,7 +16,7 @@ const TagForm = ({ findChampions, resetResultState }) => {
             <h2>
                 {tagButtons}
             </h2>
-            <button onClick={() => resetResultState()}>Reset the filter?</button>
+            <button className="reset-button" onClick={() => resetResultState()}>Reset the filter?</button>
         </>
     )
 }

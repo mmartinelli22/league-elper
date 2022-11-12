@@ -1,6 +1,7 @@
 import React from "react";
 import './ChampionCard.css'
 import { Link } from "react-router-dom/cjs/react-router-dom.min";
+import PropTypes from 'prop-types'
 
 const ChampionCard = ({ champion, displayForm }) => {
     const imgPrefix = 'http://ddragon.leagueoflegends.com/cdn/12.18.1/img/champion/';
@@ -24,3 +25,7 @@ const ChampionCard = ({ champion, displayForm }) => {
     )
 }
 export default ChampionCard;
+ChampionCard.propTypes = {
+    champion: PropTypes.array,
+    displayForm: PropTypes.func
+}

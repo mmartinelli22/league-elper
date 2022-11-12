@@ -2,3 +2,14 @@
     align-items: center;
     display: contents;
 }
+
+.possible-champions,
+.reset-button {
+    background-color: black;
+    color: gold;
+    margin: 2%;
+}
+
+button:hover {
+    cursor: pointer;
+}

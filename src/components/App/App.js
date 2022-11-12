@@ -10,13 +10,10 @@ import { Route, Switch } from "react-router-dom";
 const App = () => {
   const [appState, setAppState] = useState([])
   const [resultState, setResultState] = useState([])
-  const [form, showForm] = useState(true)
 
   useEffect(() => {
     fetchData().then((json) => {
-      console.log('json', json[0])
       setAppState(json);
-      console.log('appState', appState)
     }
     );
   }, []);
@@ -31,12 +28,6 @@ const App = () => {
     })
     setResultState(getChampion)
   }
-  // const displayForm = () => {
-  //   showForm(false)
-  // }
-  // const showFilterList = () => {
-  //   showForm(true)
-  // }
 
   return (
     < div className="App" >
