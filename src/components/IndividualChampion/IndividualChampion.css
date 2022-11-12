@@ -39,7 +39,7 @@
     border-color: gold;
 }
 
-@media (max-width:500px) {
+@media (max-width:830px) {
     .single-champion-details {
         align-items: center;
         background-color: black;
