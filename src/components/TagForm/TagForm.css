@@ -1,6 +1,7 @@
 .tag-buttons {
-    align-items: center;
-    display: contents;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
 }
 
 .possible-champions,

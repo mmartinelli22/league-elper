@@ -26,6 +26,6 @@ const ChampionCard = ({ champion, displayForm }) => {
 }
 export default ChampionCard;
 ChampionCard.propTypes = {
-    champion: PropTypes.array,
+    champion: PropTypes.object,
     displayForm: PropTypes.func
 }

@@ -22,3 +22,5 @@ body {
 .filter-button {
   top: 500px;
 }
+
+@media (min-width:500px) {}
