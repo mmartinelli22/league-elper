@@ -23,4 +23,14 @@ body {
   top: 500px;
 }
 
-@media (min-width:500px) {}
+@media screen and (min-width: 55em) {
+  body {
+    background: magenta;
+  }
+}
+
+@media screen and (max-width: 40em) {
+  body {
+    background: teal;
+  }
+}
