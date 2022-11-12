@@ -1,4 +1,33 @@
-@media only screen and (max-width: 600px) {
+body {
+  background-color: darkblue;
+}
+
+.App {
+  height: 100vh;
+}
+
+.champion-container {
+  align-items: center;
+}
+
+.home-page {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  overflow: scroll;
+}
+
+.filter-button {
+  top: 500px;
+}
+
+@media only screen and (max-width: 55em) {
+  body {
+    background-color: darkblue;
+  }
+
   .App {
     height: 100vh;
   }
