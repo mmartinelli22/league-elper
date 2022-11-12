@@ -38,3 +38,47 @@
     margin-left: 42%;
     border-color: gold;
 }
+
+@media (max-width:600px) {
+    .single-champion-details {
+        align-items: center;
+        background-color: black;
+    }
+
+    .champion-details-img {
+        width: 35%;
+        height: 45%;
+        align-items: center;
+        margin-left: 30%;
+    }
+
+    .champion-details-name {
+        margin-left: 45%;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        color: darkslateblue;
+    }
+
+    .champion-details-title {
+        margin-left: 42%;
+        color: dodgerblue;
+        border: 100px;
+        border-color: gold;
+    }
+
+    .champion-blurb {
+        color: white;
+        font-family: cursive;
+    }
+
+    .champion-details-tags {
+        color: white;
+    }
+
+    .home-button {
+        background-color: darkblue;
+        color: gold;
+        margin-left: 42%;
+        border-color: gold;
+    }
+
+}
