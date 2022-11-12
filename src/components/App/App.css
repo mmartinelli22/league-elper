@@ -1,36 +1,22 @@
-body {
-  background-color: darkblue;
-}
-
-.App {
-  height: 100vh;
-}
-
-.champion-container {
-  align-items: center;
-}
-
-.home-page {
-  align-items: center;
-  justify-content: center;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  overflow: scroll;
-}
-
-.filter-button {
-  top: 500px;
-}
-
-@media screen and (min-width: 55em) {
-  body {
-    background: magenta;
+@media only screen and (max-width: 600px) {
+  .App {
+    height: 100vh;
   }
-}
 
-@media screen and (max-width: 40em) {
-  body {
-    background: teal;
+  .champion-container {
+    align-items: center;
+  }
+
+  .home-page {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    overflow: scroll;
+  }
+
+  .filter-button {
+    top: 500px;
   }
 }
