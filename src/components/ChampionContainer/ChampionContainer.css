@@ -7,23 +7,6 @@
     margin-left: 15%;
 }
 
-@media(max-width:830px) {
-    .champion-container {
-        width: 80%;
-        display: flex;
-        flex-direction: row;
-        margin-bottom: 110%;
-        margin-left: 50%;
-    }
-
-    .feature-champions-key {
-        display: grid;
-        grid-template-columns: repeat(4, 30%);
-        justify-content: center;
-        align-items: center;
-    }
-}
-
 .feature-champions-key {
     display: grid;
     grid-template-columns: repeat(4, 70%);
@@ -32,4 +15,17 @@
     justify-content: center;
     align-items: center;
     cursor: pointer;
+}
+
+@media(max-width:830px) {
+    .champion-container {
+        width: 25%;
+        margin-bottom: 90%;
+        margin-right: 40%;
+    }
+
+    .feature-champions-key {
+        display: grid;
+        grid-template-columns: repeat(3, 50%);
+    }
 }
