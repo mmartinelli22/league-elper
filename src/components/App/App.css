@@ -23,7 +23,7 @@ body {
   top: 500px;
 }
 
-@media only screen and (max-width: 55em) {
+@media only screen and (max-width: 850px) {
   body {
     background-color: rgb(122, 122, 189);
   }
@@ -42,9 +42,5 @@ body {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-  }
-
-  .filter-button {
-    top: 500px;
   }
 }
