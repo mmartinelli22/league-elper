@@ -3,7 +3,10 @@ import ChampionCard from "../ChampionCard/ChampionCard";
 import './ChampionContainer.css'
 import PropTypes from 'prop-types'
 const ChampionsLoad = ({ characters, displayForm }) => {
-    const featureChampions = characters.map((character, index,) => {
+    console.log({
+        characters
+    });
+    const featureChampions = characters?.map((character, index,) => {
         return (
             <ChampionCard
                 champion={character}
@@ -13,7 +16,7 @@ const ChampionsLoad = ({ characters, displayForm }) => {
             />
 
         )
-    })
+    }) ?? [];
     return <div className="champion-container"><h2 className="feature-champions-key">{featureChampions}</h2></div>;
 }
 export default ChampionsLoad
