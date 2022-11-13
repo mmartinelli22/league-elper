@@ -21,9 +21,7 @@
         grid-template-columns: repeat(4, 30%);
         height: 20px;
         width: 150px;
-        transition: transform 0.2s ease-in-out;
         justify-content: center;
-        align-items: center;
     }
 }
 
