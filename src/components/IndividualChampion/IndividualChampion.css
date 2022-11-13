@@ -43,6 +43,7 @@
     .single-champion-details {
         align-items: center;
         background-color: black;
+        height: 100vh;
     }
 
     .champion-details-img {
