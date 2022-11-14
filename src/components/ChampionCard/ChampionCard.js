@@ -3,7 +3,7 @@ import './ChampionCard.css'
 import { Link } from "react-router-dom/cjs/react-router-dom.min";
 import PropTypes from 'prop-types'
 
-const ChampionCard = ({ champion, displayForm }) => {
+const ChampionCard = ({ champion }) => {
     const imgPrefix = 'http://ddragon.leagueoflegends.com/cdn/12.18.1/img/champion/';
     return (
         <Link to={`/${champion.id}`}>
@@ -16,7 +16,6 @@ const ChampionCard = ({ champion, displayForm }) => {
                     id={champion.id}
                     title={champion.title}
                     src={`${imgPrefix}${champion.image.full}`}
-                    onClick={() => displayForm()}
 
                 />
             </div>

@@ -1,0 +1,48 @@
+{
+  "champions": [
+    {
+      "id": "Ksante",
+      "name": "K'sante",
+      "title": "The Pride of Nazumah",
+      "blurb": "blurb",
+      "image": "noimageyet",
+      "tags": [
+        "Fighter",
+        "Tank"
+      ]
+    },
+    {
+      "id": "Gangplank",
+      "name": "Gangplank",
+      "title": "The Saltwater Scourge",
+      "blurb": "Gangplank is dope",
+      "image": "gigachad",
+      "tags": [
+        "Fighter",
+        "Tank"
+      ]
+    },
+    {
+      "id": "Zilean",
+      "name": "Zilean",
+      "title": "The Chronokeeper",
+      "blurb": "old dude with bombs",
+      "image": "bigbeard",
+      "tags": [
+        "Support",
+        "Mage"
+      ]
+    },
+    {
+      "id": "Mordekaiser",
+      "name": "Mordekaiser",
+      "title": "The Iron Revenant",
+      "blurb": "Super big dude with big mace",
+      "image": "randyhammah",
+      "tags": [
+        "Fighter",
+        "Tank"
+      ]
+    }
+  ]
+}
