@@ -5,7 +5,6 @@
 - [Features](#features)
 - [Possible Future Extensions](#possible-future-extensions)
 - [Set Up](#set-up)
-- [Contributors](#contributors)
 
 
 Loaded Screen 
