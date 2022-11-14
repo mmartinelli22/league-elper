@@ -7,12 +7,16 @@
 - [Set Up](#set-up)
 - [Contributors](#contributors)
 
+
 Loaded Screen 
-<img width="1440" alt="Screen Shot 2022-11-13 at 5 24 24 PM" src="https://user-images.githubusercontent.com/97009704/201552820-02776e5c-106f-49c6-b428-821f3be4fc50.png">
+<img width="1433" alt="Screen Shot 2022-11-13 at 5 24 24 PM" src="https://user-images.githubusercontent.com/97009704/201553316-d99283bc-b9c6-447f-93fa-a4800d81f75e.png">
+
 Filtered by Tag 
-<img width="1440" alt="Screen Shot 2022-11-13 at 5 24 28 PM" src="https://user-images.githubusercontent.com/97009704/201552841-3ec4d136-ce76-417a-b0d4-fca2a343832a.png">
+<img width="1410" alt="Screen Shot 2022-11-13 at 5 24 28 PM" src="https://user-images.githubusercontent.com/97009704/201553328-0d012bb9-2f29-4055-b3dd-11aeb9b06a2f.png">
+
 Champion Card
-<img width="1440" alt="Screen Shot 2022-11-13 at 5 24 32 PM" src="https://user-images.githubusercontent.com/97009704/201552887-19203276-3e74-441c-8c99-bcaa830d6de7.png">
+<img width="1424" alt="Screen Shot 2022-11-13 at 5 24 32 PM" src="https://user-images.githubusercontent.com/97009704/201553331-f08bda38-1326-4004-bc0b-f5b3b1feca1d.png">
+
 
 ## Deployed-Link
 https://league-helper-lnnmvfclk-mmartinelli22.vercel.app/
